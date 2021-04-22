@@ -1,0 +1,42 @@
+name: doorstop
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: cache-pip
+        uses: actions/cache@v1
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('scripts/requirements.txt') }}
+
+      - name: install-pip
+        run: |
+            pip install -r scripts/requirements.txt
+      
+      - name: check-doorstop
+        run: |
+          doorstop 2> doorstop.err
+          errfile=doorstop.err
+          req=
+          numerrs=$(wc -l < "$errfile")
+          if [ $numerrs -ge 1 ]; then
+            cat "$errfile" | while read line
+            do
+              req=$(echo $line | sed 's/\(.*\)\(ZEP[0-9]\{3\}\).*/\2/')
+              echo "::warning file=$req.yml::doorstop: $line"
+            done
+            exit 1
+          fi

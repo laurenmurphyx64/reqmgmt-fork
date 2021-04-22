@@ -1,5 +1,5 @@
 settings:
   digits: 3
-  parent: SYS
+  parent: MKT
   prefix: FUNC
   sep: ''
