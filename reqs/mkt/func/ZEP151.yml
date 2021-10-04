@@ -1,0 +1,15 @@
+active: true
+component allocation: Scheduling
+derived: false
+header: ''
+level: 51.0
+links:
+- ZEP019: uoNbtGzGH4tL4dLlKeGXIYhpG-hcFnfgp6XZIc_n948=
+name: Time sharing of CPU resources
+normative: true
+ref: ''
+release: 'v2.7.0'
+reviewed: _TG7wiUEZrFMFbjz9BMrPL5WNbRViV8qfUNiCYD9Srw=
+text: |
+  The system shall support traditional time sharing of CPU resources among threads of the same priority.
+uid: '199333'

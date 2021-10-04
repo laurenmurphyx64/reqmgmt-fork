@@ -1,0 +1,14 @@
+active: true
+component allocation: Scheduling
+derived: false
+header: ''
+level: 9.0
+links: []
+name: Deadline Scheduling Priorities
+normative: true
+ref: ''
+release: 'v2.7.0'
+reviewed: HJGU6Rwdv5b-WpL-Up19Qz0iy-NXXsTZ44qKXw_3Ckc=
+text: |
+  The system shall organize running threads by earliest deadline first priority.
+uid: '330017'

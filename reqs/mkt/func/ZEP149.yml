@@ -1,0 +1,15 @@
+active: true
+component allocation: Scheduling
+derived: false
+header: ''
+level: 49.0
+links:
+- ZEP019: uoNbtGzGH4tL4dLlKeGXIYhpG-hcFnfgp6XZIc_n948=
+name: Preemption support
+normative: true
+ref: ''
+release: 'v2.7.0'
+reviewed: JXha6YmAMX38sgfanxAyO5ApzSYbVCjShNDTQk8GBLU=
+text: |
+  The system shall support preemption of a running thread by a higher priority thread
+uid: '199335'

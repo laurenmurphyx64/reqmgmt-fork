@@ -1,0 +1,14 @@
+active: true
+component allocation: Scheduling
+derived: false
+header: ''
+level: 19.0
+links: []
+name: Scheduling
+normative: true
+ref: ''
+release: 'v2.7.0'
+reviewed: uoNbtGzGH4tL4dLlKeGXIYhpG-hcFnfgp6XZIc_n948=
+text: |
+  The system shall provide a mechanism for selecting which of many threads will be run on a given CPU
+uid: '199099'
