@@ -52,7 +52,7 @@ jobs:
     - name: install-pkgs
       run: |
         sudo apt-get update
-        sudo apt-get install -y pandoc texlive-latex-base texlive-fonts-recommended texlive-extra-utils texlive-latex-extra lmodern
+        # TODO: Packages for RTD, etc.
 
     - name: cache-pip
       uses: actions/cache@v1
@@ -67,8 +67,7 @@ jobs:
 
     - name: build-docs
       run: |
-        doorstop publish SYS _build/requirements.md
-        pandoc _build/requirements.md -o _build/requirements.pdf
+        echo TODO
 
     - name: upload-build
       uses: actions/upload-artifact@master
