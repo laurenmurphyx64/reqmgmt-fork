@@ -1,0 +1,15 @@
+active: true
+component allocation: Scheduling
+derived: false
+header: ''
+level: 50.0
+links:
+- ZEP019: uoNbtGzGH4tL4dLlKeGXIYhpG-hcFnfgp6XZIc_n948=
+name: Un-preemptable thread priorities
+normative: true
+ref: ''
+release: 'v2.7.0'
+reviewed: bKKSvk_EKO3MbCZVuz8Cj1VikpKm6d1jnsnLfpYMAvg=
+text: |
+  The system shall support thread priorities which cannot be preempted by other user threads.
+uid: '199334'

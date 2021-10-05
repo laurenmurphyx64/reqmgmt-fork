@@ -1,0 +1,15 @@
+active: true
+component allocation: Scheduling
+derived: false
+header: ''
+level: 47.0
+links:
+- ZEP019: uoNbtGzGH4tL4dLlKeGXIYhpG-hcFnfgp6XZIc_n948=
+name: Organize running threads into a fixed list
+normative: true
+ref: ''
+release: 'v2.7.0'
+reviewed: gkyhLyTH6xNX-h88a0-KT-jLOKxBEPplMUrrgrMDr10=
+text: |
+  The system shall organize running threads into a fixed list of numeric priorities
+uid: '199337'

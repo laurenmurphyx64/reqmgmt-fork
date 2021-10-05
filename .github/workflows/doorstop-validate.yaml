@@ -1,0 +1,53 @@
+name: doorstop
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  workflow_dispatch:
+
+jobs:
+  format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+
+      - name: cache-pip
+        uses: actions/cache@v1
+        with:
+          path: ~/.cache/pip
+          key: pip-${{ hashFiles('scripts/requirements.txt') }}
+
+      - name: install-pip
+        run: |
+            pip install -r scripts/requirements.txt
+
+      - name: check-format
+        run: |
+          # TODO: Scan just those files changed / added on this PR
+          # (Get changed files GitHub action doesn't work for multiple commits)
+          result=
+          warnings=
+          echo
+          FILES=($(find reqs/ -name "ZEP*.yml" 2>/dev/null))
+          for file in "${FILES[@]}"; do
+            result=$(./scripts/check-format.py $file)
+            if [ result ] ; then
+              warnings=true
+              echo -n "$result"
+            fi
+          done
+          if [ "$warnings" = true ]; then
+            exit 1
+          fi
+
+      # Checks spelling, grammar and punctuation (one sentence, ended by period, etc.)
+      # - name: check-spelling-grammar-punctuation
+      #   run: |
+      #     # WIP; not sure if Zephyr Project would need to license LanguageTool use
+      #     # https://languagetool.org/
+      #     # https://github.com/jxmorris12/language_tool_python

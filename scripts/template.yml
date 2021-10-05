@@ -1,0 +1,14 @@
+active: true
+component allocation: (One of existing components)
+derived: false
+header: ''
+level: 1.0
+links: []
+name: (Short bullet point description)
+normative: true
+ref: ''
+release: 'vX.X.0'
+reviewed: ''
+text: |
+  The system shall do (description).
+uid: null

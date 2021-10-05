@@ -1,0 +1,14 @@
+active: true
+component allocation: Scheduling
+derived: false
+header: ''
+level: 8.0
+links: []
+name: Meta-IRQ Priorities
+normative: true
+ref: ''
+release: 'v2.7.0'
+reviewed: jVzBIL5fbJjhFCfsSALWTmb1ChKxma9MkNGT0HKUtU4=
+text: |
+  The kernel shall support running threads in Meta-IRQ Priorities
+uid: '330018'

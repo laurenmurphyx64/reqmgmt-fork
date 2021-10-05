@@ -1,0 +1,15 @@
+active: true
+component allocation: Scheduling
+derived: false
+header: ''
+level: 48.0
+links:
+- ZEP019: uoNbtGzGH4tL4dLlKeGXIYhpG-hcFnfgp6XZIc_n948=
+name: Runtime changes to a thread's priority and scheduler state
+normative: true
+ref: ''
+release: 'v2.7.0'
+reviewed: xd6pxjJN16Fw1r2deJsQqt7fP0_L4t0bg7MMEdkCLrA=
+text: |
+  The system shall support runtime changes to a thread's priority and scheduler state.
+uid: '199336'
